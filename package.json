@@ -1,0 +1,37 @@
+{
+  "name": "hpccloud-wf-visualizer",
+  "description": "Visualizer Workflow for HPCCloud",
+  "private": true,
+  "license": "BSD3",
+  "version": "0.0.1",
+  "scripts": {
+    "commit": "git cz",
+    "build": "vue-cli-service build client/index.js --target lib --formats umd-min --name Visualizer",
+    "lint": "vue-cli-service lint",
+    "semantic-release": "semantic-release",
+    "serve": "vue-cli-service serve"
+  },
+  "dependencies": {
+    "core-js": "^2.6.5",
+    "vue": "2.6.10"
+  },
+  "devDependencies": {
+    "@vue/cli-plugin-babel": "3.9.2",
+    "@vue/cli-plugin-eslint": "3.9.2",
+    "@vue/cli-service": "3.9.3",
+    "@vue/eslint-config-airbnb": "4.0.1",
+    "@vue/eslint-config-prettier": "4.0.1",
+    "@vue/test-utils": "1.0.0-beta.29",
+    "babel-core": "7.0.0-bridge.0",
+    "babel-eslint": "10.0.1",
+    "eslint": "^5.16.0",
+    "eslint-plugin-vue": "5.0.0",
+    "vue-template-compiler": "2.6.10",
+    "vuetify-loader": "^1.2.2"
+  },
+  "config": {
+    "commitizen": {
+      "path": "node_modules/cz-conventional-changelog"
+    }
+  }
+}
