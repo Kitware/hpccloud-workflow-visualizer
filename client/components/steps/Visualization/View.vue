@@ -1,21 +1,10 @@
-<script>
-import { clusterFilter, getPayload } from './helper';
-
-export default {
-  name: 'VisualizerViewSimulation',
-  methods: {
-    clusterFilter,
-    getPayload,
-  },
-};
-</script>
-
 <template>
   <div>
-    (view)
-    <hpc-job-scheduling
-      :clusterFilter="clusterFilter"
-      :getPayload="getPayload"
+    <hpc-job-monitoring
+      :project="project"
+      :simulation="simulation"
+      :workflow="workflow"
+      :taskflowId="simulation.steps.Visualization.metadata.taskflowId"
     />
     <v-layout>
       <hpc-next-step-button />
@@ -23,3 +12,7 @@ export default {
     </v-layout>
   </div>
 </template>
+
+<script>
+export default { props: ['project', 'simulation', 'workflow'] };
+</script>
