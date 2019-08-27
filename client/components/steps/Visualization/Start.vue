@@ -12,7 +12,6 @@ export default {
 
 <template>
   <div>
-    (start)
     <hpc-job-scheduling
       :clusterFilter="clusterFilter"
       :getPayload="getPayload"
