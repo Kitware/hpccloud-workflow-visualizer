@@ -4,12 +4,10 @@
     :simulation="simulation"
     :workflow="workflow"
     :taskflowId="simulation.steps.Visualization.metadata.taskflowId"
-
     :actions="actions"
     :actionToLabel="actionToLabel"
     @taskflowChange="onTaskflowChange"
     @allCompleteChange="onAllCompleteChange"
-
     @rerun="onReRun"
     @visualize="onVisualize"
   />
@@ -22,9 +20,7 @@ const LABELS = {
 };
 
 export default {
-  props: [
-    'project', 'simulation', 'workflow'
-  ],
+  props: ['project', 'simulation', 'workflow'],
   data() {
     return {
       allComplete: false,
@@ -40,8 +36,6 @@ export default {
     },
     onTaskflowChange(taskflow) {
       if (!taskflow || !taskflow.jobMapById) {
-        console.log('invalid taskflow');
-        console.log(JSON.stringify(taskflow, null, 2));
         return;
       }
 
@@ -53,7 +47,9 @@ export default {
       // name is paraview and status is running -> visualize
       if (
         jobs.some(
-          (job) => job.name === this.workflow.primaryJobs.Visualization && job.status === 'running'
+          (job) =>
+            job.name === this.workflow.primaryJobs.Visualization &&
+            job.status === 'running'
         )
       ) {
         actions.push('visualize');
@@ -73,7 +69,7 @@ export default {
       });
     },
     onVisualize() {
-      console.log('onVisualize');
+      this.$router.push(`/tool/lite/${this.simulation._id}`);
     },
   },
 };

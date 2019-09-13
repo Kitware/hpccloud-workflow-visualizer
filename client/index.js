@@ -46,7 +46,7 @@ const visualizer = {
     },
   },
   taskFlows: {
-    Visualization: 'hpccloud.taskflow.paraview.visualizer.ParaViewTaskFlow',
+    Visualization: 'hpccloud.taskflow.paraview.pv_lite.ParaViewLiteTaskFlow',
   },
   primaryJobs: {
     Visualization: 'paraview',
