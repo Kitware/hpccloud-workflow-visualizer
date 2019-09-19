@@ -1,11 +1,12 @@
 <script>
-import { clusterFilter, getPayload } from './helper';
+import { clusterFilter, getPayload, getMetadata } from './helper';
 
 export default {
   name: 'VisualizerStartSimulation',
   methods: {
     clusterFilter,
     getPayload,
+    getMetadata,
   },
 };
 </script>
@@ -15,6 +16,7 @@ export default {
     <hpc-job-scheduling
       :clusterFilter="clusterFilter"
       :getPayload="getPayload"
+      :getMetadata="getMetadata"
     />
   </div>
 </template>

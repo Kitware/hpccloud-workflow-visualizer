@@ -24,3 +24,11 @@ export function getPayload({ simulation }) {
     },
   };
 }
+
+// ----------------------------------------------------------------------------
+
+export function getMetadata({ simulation }) {
+  return {
+    sessionId: simulation._id,
+  };
+}

@@ -60,6 +60,17 @@ const visualizer = {
       run: 'Visualization (running)',
     },
   },
+  attachments: {
+    project: [],
+    simulation: ['dataset'],
+  },
+  inputFiles: {
+    dataset: {
+      optional: true,
+      label: 'Result file',
+      accept: '.vtp,.vti,.ex2,.vtu,.vtm',
+    },
+  },
 };
 
 if (window.HPCWorkflow) {
